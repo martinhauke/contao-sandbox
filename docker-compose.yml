@@ -1,0 +1,31 @@
+version: '2'
+volumes:
+    database_data:
+        driver: local
+services:
+    php:
+        build: ./docker/php/
+        ports:
+            - 8080:80
+        volumes:
+            - ./src:/var/www/html
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: project
+            MYSQL_USER: project
+            MYSQL_PASSWORD: project
+            APPLICATION_PATH: "/app/web"
+            APACHE_DOCUMENT_ROOT: "/var/www/html/web"
+            APACHE_DOCUMENT_INDEX: "/web/app.php"
+            APACHE_RUN_USER: "glados"
+    mysql:
+        image: mysql:5.7
+        expose:
+            - 3306
+        volumes:
+            - database_data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: project
+            MYSQL_USER: project
+            MYSQL_PASSWORD: project
