@@ -22,3 +22,7 @@
 
 # Skip files
 /system/modules/*/.skip
+
+# Unnecessary files
+/.travis.yml
+/README.md
