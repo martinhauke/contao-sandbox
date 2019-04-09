@@ -10,13 +10,17 @@ help: ## This help.
 # DOCKER TASKS
 # Build the project and the containers
 build: ## Build the project with composer and set up the docker containers
-	composer install -d ./src
+	composer install --ignore-platform-reqs -d ./src
 	docker-compose build
 
 # Start the containers
 up: ## Bring the docker environment up
 	docker-compose up -d
 
-# Start the containers
+# Stop the containers
 down: ## Bring the docker environment down
 	docker-compose down
+
+# Update composer
+composer-update: ## perform composer update
+	composer update --ignore-platform-reqs -d src
