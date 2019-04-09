@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5bdfac40b9e7e129f1bd13bd3d25a76",
+    "content-hash": "378147f9aab73c9d7d508e3dba45d3ae",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -4953,7 +4953,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../contao-real-estate-bundle",
-                "reference": "615a3f6b6427dfbd81a22022354cd1f01e40ae69"
+                "reference": "9f1dcf5a1be7cae02b91e28117a39c0378867920"
             },
             "require": {
                 "contao/core-bundle": "4.4.*",
@@ -4993,7 +4993,10 @@
                     "homepage": "https://github.com/september-werbeagentur"
                 }
             ],
-            "description": "Real estate extension for Contao Open Source CMS"
+            "description": "Real estate extension for Contao Open Source CMS",
+            "transport-options": {
+                "symlink": false
+            }
         },
         {
             "name": "simplepie/simplepie",

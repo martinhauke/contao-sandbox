@@ -12,7 +12,10 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../../contao-real-estate-bundle"
+            "url": "../../contao-real-estate-bundle",
+            "options": {
+                "symlink": false
+            }
         }
     ],
     "require": {
@@ -25,7 +28,7 @@
         "contao/manager-bundle": "4.4.*",
         "contao/news-bundle": "^4.4",
         "contao/newsletter-bundle": "^4.4",
-        "september-werbeagentur/contao-real-estate-bundle":  "dev-master"
+        "september-werbeagentur/contao-real-estate-bundle": "dev-master"
     },
     "conflict": {
         "contao-components/installer": "<1.3",
